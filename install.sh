@@ -15,12 +15,12 @@ function usage () {
     exit 255
 }
 
-while getopts k:p:s:h opt; do
+while getopts a:b:k:p:s:h opt; do
     case $opt in
-        pr)
+        a)
             SERVER_PRIVATE_IP=$OPTARG
             ;;
-        pu)
+        b)
             SERVER_PUBLIC_IP=$OPTARG
             ;;
         k)
