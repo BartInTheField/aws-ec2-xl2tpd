@@ -42,8 +42,8 @@ L2TP_DHCP_BEGIN=192.168.42.10
 L2TP_DHCP_END=192.168.42.250
 
 # retrieve the IP addresses
-SERVER_PRIVATE_IP=`curl http://169.254.169.254/latest/meta-data/local-ipv4`
-SERVER_PUBLIC_IP=`curl http://169.254.169.254/latest/meta-data/public-ipv4`
+SERVER_PRIVATE_IP=test
+SERVER_PUBLIC_IP=test
 
 function if-yum-repo-exist () {
     # Usage: if-yum-repo-exist <repo>; echo $?
