@@ -17,6 +17,12 @@ function usage () {
 
 while getopts k:p:s:h opt; do
     case $opt in
+        pr)
+            SERVER_PRIVATE_IP=$OPTARG
+            ;;
+        pu)
+            SERVER_PUBLIC_IP=$OPTARG
+            ;;
         k)
             IPSEC_PSK=$OPTARG
             ;;
@@ -40,10 +46,6 @@ L2TP_VIRTUAL_IP=192.168.42.1
 L2TP_DHCP_CIDR=192.168.42.0/24
 L2TP_DHCP_BEGIN=192.168.42.10
 L2TP_DHCP_END=192.168.42.250
-
-# retrieve the IP addresses
-SERVER_PRIVATE_IP=test
-SERVER_PUBLIC_IP=test
 
 function if-yum-repo-exist () {
     # Usage: if-yum-repo-exist <repo>; echo $?
